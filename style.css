@@ -1,0 +1,172 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    background:#212121;
+    color:white;
+}
+
+nav {
+    display:flex;
+    justify-content:space-between;
+    aligin-items:center;
+    padding:1rem;
+    background-color:#212121;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+nav ul {
+    display:flex;
+    gap:5px;
+    text-direction:none;
+    list-style:none;
+}
+
+nav ul li a{
+    display:flex;
+    text-direction:none;
+    color:white;
+    list-style:none;
+    margin-top:6px;
+    margin-right:10px;
+}
+
+nav ul li a:hover{
+    color:crimson;
+    transform:scale(1.1);
+    transtion:0.5s;
+}
+
+.hero-container {
+    height: 500px;
+    padding : 20px;
+    margin-left:40px;
+    margin-right:40px;
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content:space-between;
+    align-items:center;
+    gap:40px;
+}
+
+.container img {
+    width:100%;
+    height:500px;
+}
+
+.hero-text h1 {
+    font-size:3.3rem;
+    margin-bottom:8px;
+}
+
+.hero-text {
+    width: 100%;
+}
+
+.hero-text p {
+    font-size:1.4rem;
+    margin-bottom:12px;
+}
+
+button {
+    background-color:crimson;
+    border-radius:5px;
+    border:none;
+    padding: 10px 25px;
+    color:white;
+}
+
+button:hover{
+    cursor:pointer;
+    transform:scale(1.1);
+    transtion:3s;
+}
+
+.wrapper {
+    display:inline-flex;
+    list-style:none;
+}
+
+.wrapper .icon {
+    position:relative;
+    background:#212121;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 50%;
+    padding:15px;
+    margin:10px;
+    width:50px;
+    height:50px;
+    font-size:15px;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    cursor:pointer;
+    transtion:all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size:14px;
+    background:#212121;
+    padding:5px 8px;
+    border-radius:5px;
+    opacity:0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    pointer-events: none;
+    transtion:all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip:before {
+    position: absolute;
+    content: "";
+    height:8px;
+    width:8px;
+    background:#212121;
+    bottom:-3px;
+    left:50%;
+    transform:translate(-50%) rotate(45deg);
+    transtion:all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon:hover .tooltip{
+    top:-45px;
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+}
+
+.wrapper .book:hover,
+.wrapper .book:hover .tooltip,
+.wrapper .book:hover .tooltip:before{
+    background:#212121;
+    color:white;
+}
+
+.jadwal-pelajaran {
+    background-color:#212121;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 20px 20px 20px;
+    padding:20px;
+}
+
+.jadwal-pelajaran .card {
+    margin-bottom: 10px;
+}
+@media (max-width : 848px) {
+    .hero-container {
+        margin-top: 10px;
+        flex-direction:column;
+    }
+
+    .hero-text {
+        width: 100%;
+        text-align:center;
+    }
+
+    .hero-text h1 {
+        font-size:3rem;
+    }
+}
